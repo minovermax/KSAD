@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         if let authorVC = UserDefaults(suiteName: "group.com.ksad.sokrates")?.value(forKey: "author") {
             authorLabel.text = authorVC as? String
         }
-        if quoteLabel.text != "SOKRATES." {
+        if quoteLabel.text != "SOKRATES" {
             self.quoteLabel.font = UIFont(name:"Futura-Medium", size: 24.0)
         }
         
