@@ -46,9 +46,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btA-sc-6Ok">
-                                <rect key="frame" x="310" y="608" width="35" height="34"/>
+                                <rect key="frame" x="317" y="615" width="28" height="27"/>
                                 <state key="normal" image="info.circle" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" weight="regular"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" weight="regular"/>
                                 </state>
                                 <connections>
                                     <segue destination="6D3-Iv-Zsf" kind="presentation" modalTransitionStyle="coverVertical" id="i0a-Fw-ndu"/>
@@ -108,9 +108,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ai-6J-LHx">
-                                <rect key="frame" x="322" y="25" width="23" height="24"/>
+                                <rect key="frame" x="317" y="25" width="28" height="27"/>
                                 <state key="normal" image="arrow.uturn.down.circle" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" weight="regular"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" weight="regular"/>
                                 </state>
                                 <connections>
                                     <action selector="close" destination="6D3-Iv-Zsf" eventType="touchUpInside" id="tKu-UT-CgL"/>

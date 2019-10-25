@@ -127,6 +127,10 @@ class ViewController: UIViewController {
                 while (randomQuote == self.lastRandNumInspiring) {
                     randomQuote = Int.random(in: 0 ..< fullQuote.count)
                 }
+                
+                self.lastRandNumInspiring = randomQuote
+                
+                print(randomQuote)
 
                 // IB referencing here (Use Main Thread Checker)
                 DispatchQueue.main.async {
@@ -183,6 +187,10 @@ class ViewController: UIViewController {
                 while (randomQuote == self.lastRandNumEmpowering) {
                     randomQuote = Int.random(in: 0 ..< fullQuote.count)
                 }
+                
+                self.lastRandNumEmpowering = randomQuote
+                
+                print(randomQuote)
 
                 
                 // IB referencing here (Use Main Thread Checker)
@@ -240,6 +248,10 @@ class ViewController: UIViewController {
                 while (randomQuote == self.lastRandNumMotivating) {
                     randomQuote = Int.random(in: 0 ..< fullQuote.count)
                 }
+                
+                self.lastRandNumMotivating = randomQuote
+                
+                print(randomQuote)
 
                 
                 // IB referencing here (Use Main Thread Checker)
