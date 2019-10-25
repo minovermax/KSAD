@@ -1,0 +1,6 @@
+framework module Pods_AvokadoCalendar {
+  umbrella header "Pods-AvokadoCalendar-umbrella.h"
+
+  export *
+  module * { export * }
+}
