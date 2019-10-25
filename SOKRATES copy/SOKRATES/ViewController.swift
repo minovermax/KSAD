@@ -12,9 +12,7 @@ import Network
 class ViewController: UIViewController {
     
     var internetConnected = true
-    var lastRandNumInspiring = -1
-    var lastRandNumEmpowering = -1
-    var lastRandNumMotivating = -1
+    
     
     // DO NOT TOUCH - function for loading view
     override func viewDidLoad() {
@@ -122,12 +120,9 @@ class ViewController: UIViewController {
                 let fullQuote = try JSONDecoder().decode([FullQuote].self, from: data)
                 
                 // random integer between 0 and the number of quotes in database
-                var randomQuote = Int.random(in: 0 ..< fullQuote.count)
-                
-                while (randomQuote == self.lastRandNumInspiring) {
-                    randomQuote = Int.random(in: 0 ..< fullQuote.count)
-                }
+                let randomQuote = Int.random(in: 0 ..< fullQuote.count)
 
+                
                 // IB referencing here (Use Main Thread Checker)
                 DispatchQueue.main.async {
                     
@@ -178,11 +173,7 @@ class ViewController: UIViewController {
                 let fullQuote = try JSONDecoder().decode([FullQuote].self, from: data)
                 
                 // random integer between 0 and the number of quotes in database
-                var randomQuote = Int.random(in: 0 ..< fullQuote.count)
-                
-                while (randomQuote == self.lastRandNumEmpowering) {
-                    randomQuote = Int.random(in: 0 ..< fullQuote.count)
-                }
+                let randomQuote = Int.random(in: 0 ..< fullQuote.count)
 
                 
                 // IB referencing here (Use Main Thread Checker)
@@ -235,11 +226,7 @@ class ViewController: UIViewController {
                 let fullQuote = try JSONDecoder().decode([FullQuote].self, from: data)
                 
                 // random integer between 0 and the number of quotes in database
-                var randomQuote = Int.random(in: 0 ..< fullQuote.count)
-                
-                while (randomQuote == self.lastRandNumMotivating) {
-                    randomQuote = Int.random(in: 0 ..< fullQuote.count)
-                }
+                let randomQuote = Int.random(in: 0 ..< fullQuote.count)
 
                 
                 // IB referencing here (Use Main Thread Checker)
