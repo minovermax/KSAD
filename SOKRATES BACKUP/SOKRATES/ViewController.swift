@@ -12,7 +12,9 @@ import Network
 class ViewController: UIViewController {
     
     var internetConnected = true
-    
+    var lastRandNumInspiring = -1
+    var lastRandNumEmpowering = -1
+    var lastRandNumMotivating = -1
     
     // DO NOT TOUCH - function for loading view
     override func viewDidLoad() {
@@ -88,7 +90,7 @@ class ViewController: UIViewController {
     // function for UIAlert when no Internet connection
     func showNoInternetAlert () {
         
-        let alert = UIAlertController(title: "No Internet Connection", message: "You need Internet connection in order to change the quote!", preferredStyle: .alert)
+        let alert = UIAlertController(title: "No Internet Connection", message: "Internet is required to connect to our quote database.", preferredStyle: .alert)
         
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         
@@ -120,9 +122,16 @@ class ViewController: UIViewController {
                 let fullQuote = try JSONDecoder().decode([FullQuote].self, from: data)
                 
                 // random integer between 0 and the number of quotes in database
-                let randomQuote = Int.random(in: 0 ..< fullQuote.count)
-
+                var randomQuote = Int.random(in: 0 ..< fullQuote.count)
                 
+                while (randomQuote == self.lastRandNumInspiring) {
+                    randomQuote = Int.random(in: 0 ..< fullQuote.count)
+                }
+                
+                self.lastRandNumInspiring = randomQuote
+                
+                print(randomQuote)
+
                 // IB referencing here (Use Main Thread Checker)
                 DispatchQueue.main.async {
                     
@@ -173,7 +182,15 @@ class ViewController: UIViewController {
                 let fullQuote = try JSONDecoder().decode([FullQuote].self, from: data)
                 
                 // random integer between 0 and the number of quotes in database
-                let randomQuote = Int.random(in: 0 ..< fullQuote.count)
+                var randomQuote = Int.random(in: 0 ..< fullQuote.count)
+                
+                while (randomQuote == self.lastRandNumEmpowering) {
+                    randomQuote = Int.random(in: 0 ..< fullQuote.count)
+                }
+                
+                self.lastRandNumEmpowering = randomQuote
+                
+                print(randomQuote)
 
                 
                 // IB referencing here (Use Main Thread Checker)
@@ -226,7 +243,15 @@ class ViewController: UIViewController {
                 let fullQuote = try JSONDecoder().decode([FullQuote].self, from: data)
                 
                 // random integer between 0 and the number of quotes in database
-                let randomQuote = Int.random(in: 0 ..< fullQuote.count)
+                var randomQuote = Int.random(in: 0 ..< fullQuote.count)
+                
+                while (randomQuote == self.lastRandNumMotivating) {
+                    randomQuote = Int.random(in: 0 ..< fullQuote.count)
+                }
+                
+                self.lastRandNumMotivating = randomQuote
+                
+                print(randomQuote)
 
                 
                 // IB referencing here (Use Main Thread Checker)

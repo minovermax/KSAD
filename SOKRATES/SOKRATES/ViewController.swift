@@ -90,7 +90,7 @@ class ViewController: UIViewController {
     // function for UIAlert when no Internet connection
     func showNoInternetAlert () {
         
-        let alert = UIAlertController(title: "No Internet Connection", message: "You need Internet connection in order to change the quote!", preferredStyle: .alert)
+        let alert = UIAlertController(title: "No Internet Connection", message: "Internet is required to connect to our quote database.", preferredStyle: .alert)
         
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         
