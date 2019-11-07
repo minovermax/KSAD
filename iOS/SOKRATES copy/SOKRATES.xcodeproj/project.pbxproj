@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2238D5D9235E201900C2C29D /* AboutSOKRATES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2238D5D8235E201900C2C29D /* AboutSOKRATES.swift */; };
+		22C0B9EB2374665600B58127 /* SettingsSOKRATES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C0B9EA2374665600B58127 /* SettingsSOKRATES.swift */; };
 		22E501CC235697FF00939688 /* FullQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E501CB235697FF00939688 /* FullQuote.swift */; };
 		22F908EE235616CB00AF34D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F908ED235616CB00AF34D0 /* AppDelegate.swift */; };
 		22F908F0235616CB00AF34D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F908EF235616CB00AF34D0 /* SceneDelegate.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		2238D5D8235E201900C2C29D /* AboutSOKRATES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSOKRATES.swift; sourceTree = "<group>"; };
+		22C0B9EA2374665600B58127 /* SettingsSOKRATES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSOKRATES.swift; sourceTree = "<group>"; };
 		22E501CB235697FF00939688 /* FullQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullQuote.swift; sourceTree = "<group>"; };
 		22F908EA235616CB00AF34D0 /* SOKRATES.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOKRATES.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F908ED235616CB00AF34D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				22F908F1235616CB00AF34D0 /* ViewController.swift */,
 				22F908F3235616CB00AF34D0 /* Main.storyboard */,
 				2238D5D8235E201900C2C29D /* AboutSOKRATES.swift */,
+				22C0B9EA2374665600B58127 /* SettingsSOKRATES.swift */,
 				22F908F6235616CC00AF34D0 /* Assets.xcassets */,
 				22F908F8235616CC00AF34D0 /* LaunchScreen.storyboard */,
 				22F908FB235616CC00AF34D0 /* Info.plist */,
@@ -245,6 +248,7 @@
 				2238D5D9235E201900C2C29D /* AboutSOKRATES.swift in Sources */,
 				22F908EE235616CB00AF34D0 /* AppDelegate.swift in Sources */,
 				22F908F0235616CB00AF34D0 /* SceneDelegate.swift in Sources */,
+				22C0B9EB2374665600B58127 /* SettingsSOKRATES.swift in Sources */,
 				22E501CC235697FF00939688 /* FullQuote.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     var lastRandNumInspiring = -1
     var lastRandNumEmpowering = -1
     var lastRandNumMotivating = -1
+
     
     // DO NOT TOUCH - function for loading view
     override func viewDidLoad() {
@@ -157,8 +158,6 @@ class ViewController: UIViewController {
                     // put in UserDefaults for the TodayExtension
                     UserDefaults.init(suiteName: "group.com.ksad.sokrates")?.setValue(self.quoteLabel.text, forKey: "quote")
                     UserDefaults.init(suiteName: "group.com.ksad.sokrates")?.setValue(self.authorLabel.text, forKey: "author")
-                    
-                    self.notifications()
                 }
                 
             
@@ -220,8 +219,6 @@ class ViewController: UIViewController {
                     // put in UserDefaults for the TodayExtension
                     UserDefaults.init(suiteName: "group.com.ksad.sokrates")?.setValue(self.quoteLabel.text, forKey: "quote")
                     UserDefaults.init(suiteName: "group.com.ksad.sokrates")?.setValue(self.authorLabel.text, forKey: "author")
-                    
-                    self.notifications()
                 }
                 
             
@@ -283,8 +280,6 @@ class ViewController: UIViewController {
                     // put in UserDefaults for the TodayExtension
                     UserDefaults.init(suiteName: "group.com.ksad.sokrates")?.setValue(self.quoteLabel.text, forKey: "quote")
                     UserDefaults.init(suiteName: "group.com.ksad.sokrates")?.setValue(self.authorLabel.text, forKey: "author")
-                    
-                    self.notifications()
                 }
                 
             
@@ -321,6 +316,8 @@ class ViewController: UIViewController {
         
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
+    
+    
     
 }
 

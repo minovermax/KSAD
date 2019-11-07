@@ -8,6 +8,7 @@
 
 import UIKit
 import Network
+import UserNotifications
 
 class ViewController: UIViewController {
     
@@ -22,10 +23,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        notifications()
+        
         if let quoteVC = UserDefaults(suiteName: "group.com.ksad.sokrates")?.value(forKey: "quote") {
             quoteLabel.text = quoteVC as? String
         }
-        
+
         if let authorVC = UserDefaults(suiteName: "group.com.ksad.sokrates")?.value(forKey: "author") {
             authorLabel.text = authorVC as? String
         }
@@ -63,6 +66,7 @@ class ViewController: UIViewController {
     @IBAction func setInspiringQuoteButton(_ sender: Any) {
         if internetConnected == true {
             setInspiringQuote()
+            notifications()
         } else if internetConnected == false {
             showNoInternetAlert()
         }
@@ -71,6 +75,7 @@ class ViewController: UIViewController {
     @IBAction func setEmpoweringQuoteButton(_ sender: Any) {
         if internetConnected == true {
             setEmpoweringQuote()
+            notifications()
         } else if internetConnected == false {
             showNoInternetAlert()
         }
@@ -79,6 +84,7 @@ class ViewController: UIViewController {
     @IBAction func setMotivatingQuoteButton(_ sender: Any) {
         if internetConnected == true {
             setMotivatingQuote()
+            notifications()
         } else if internetConnected == false {
             showNoInternetAlert()
         }
@@ -119,8 +125,6 @@ class ViewController: UIViewController {
                         
                 let fullQuote = try JSONDecoder().decode([FullQuote].self, from: data)
                 
-                print(type(of: fullQuote))
-                
                 // random integer between 0 and the number of quotes in database
                 var randomQuote = Int.random(in: 0 ..< fullQuote.count)
                 
@@ -153,6 +157,8 @@ class ViewController: UIViewController {
                     // put in UserDefaults for the TodayExtension
                     UserDefaults.init(suiteName: "group.com.ksad.sokrates")?.setValue(self.quoteLabel.text, forKey: "quote")
                     UserDefaults.init(suiteName: "group.com.ksad.sokrates")?.setValue(self.authorLabel.text, forKey: "author")
+                    
+                    self.notifications()
                 }
                 
             
@@ -214,6 +220,8 @@ class ViewController: UIViewController {
                     // put in UserDefaults for the TodayExtension
                     UserDefaults.init(suiteName: "group.com.ksad.sokrates")?.setValue(self.quoteLabel.text, forKey: "quote")
                     UserDefaults.init(suiteName: "group.com.ksad.sokrates")?.setValue(self.authorLabel.text, forKey: "author")
+                    
+                    self.notifications()
                 }
                 
             
@@ -275,6 +283,8 @@ class ViewController: UIViewController {
                     // put in UserDefaults for the TodayExtension
                     UserDefaults.init(suiteName: "group.com.ksad.sokrates")?.setValue(self.quoteLabel.text, forKey: "quote")
                     UserDefaults.init(suiteName: "group.com.ksad.sokrates")?.setValue(self.authorLabel.text, forKey: "author")
+                    
+                    self.notifications()
                 }
                 
             
@@ -285,6 +295,32 @@ class ViewController: UIViewController {
         }.resume()
     }
     
+    // MARK: - Notifications
+    
+    func notifications() {
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Yesterday's Great Knowledge:"
+        
+        content.body = ((UserDefaults(suiteName: "group.com.ksad.sokrates")?.value(forKey: "quote") as! String))
+        
+        
+        content.sound = UNNotificationSound.default
+        
+        // trigger time setup
+        
+        var triggerDaily = DateComponents()
+        triggerDaily.hour = 7
+        triggerDaily.minute = 0
+        triggerDaily.second = 0
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDaily, repeats: true)
+        
+        
+        let request = UNNotificationRequest(identifier: "dailyQuote", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+    }
     
 }
 

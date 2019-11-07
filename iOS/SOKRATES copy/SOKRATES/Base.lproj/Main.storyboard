@@ -7,6 +7,37 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--SettingsSOKRATES-->
+        <scene sceneID="aRm-TP-or1">
+            <objects>
+                <viewController id="p86-y4-jbI" customClass="SettingsSOKRATES" customModule="SOKRATES" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FJX-K7-vF9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8F-CI-4tB">
+                                <rect key="frame" x="356" y="25" width="28" height="27"/>
+                                <state key="normal" image="arrow.uturn.down.circle" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" scale="medium" weight="light"/>
+                                </state>
+                                <connections>
+                                    <action selector="close" destination="p86-y4-jbI" eventType="touchUpInside" id="QV3-Tn-LQX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="yJo-H4-AZc" firstAttribute="trailing" secondItem="R8F-CI-4tB" secondAttribute="trailing" constant="30" id="9gm-cV-Y6V"/>
+                            <constraint firstItem="R8F-CI-4tB" firstAttribute="top" secondItem="yJo-H4-AZc" secondAttribute="top" constant="25" id="a4N-Fu-TCd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yJo-H4-AZc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YoW-fd-Nx1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vd3-GV-P33" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.98550724637681" y="804.91071428571422"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -48,7 +79,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btA-sc-6Ok">
                                 <rect key="frame" x="356" y="810" width="28" height="27"/>
                                 <state key="normal" image="info.circle" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" weight="light"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" scale="medium" weight="light"/>
                                 </state>
                                 <connections>
                                     <segue destination="6D3-Iv-Zsf" kind="presentation" modalTransitionStyle="coverVertical" id="i0a-Fw-ndu"/>
@@ -66,16 +97,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eX0-Um-abH">
+                                <rect key="frame" x="30" y="813" width="30.5" height="29"/>
+                                <state key="normal" image="gear" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" scale="medium" weight="light"/>
+                                </state>
+                                <connections>
+                                    <segue destination="p86-y4-jbI" kind="presentation" modalTransitionStyle="coverVertical" id="JNd-W5-h4r"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="WpS-YW-Slk" firstAttribute="top" secondItem="67O-8Y-sor" secondAttribute="bottom" constant="30" id="238-Bn-3Fb"/>
                             <constraint firstItem="QIE-cW-LCA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="2Hn-CP-PEc"/>
+                            <constraint firstItem="eX0-Um-abH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="4me-nf-OUF"/>
                             <constraint firstItem="67O-8Y-sor" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4rl-6P-Fiv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="btA-sc-6Ok" secondAttribute="trailing" constant="30" id="7SE-Ay-Nt8"/>
                             <constraint firstItem="XM5-ef-fdB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8QP-vg-l1k"/>
                             <constraint firstItem="67O-8Y-sor" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ARv-8E-BQG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="btA-sc-6Ok" secondAttribute="bottom" constant="25" id="BZ2-EK-loV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eX0-Um-abH" secondAttribute="bottom" constant="20" id="ChF-xj-sc2"/>
                             <constraint firstItem="4lh-kp-FKe" firstAttribute="top" secondItem="67O-8Y-sor" secondAttribute="bottom" constant="30" id="OgS-Vn-ORl"/>
                             <constraint firstItem="XM5-ef-fdB" firstAttribute="leading" secondItem="4lh-kp-FKe" secondAttribute="trailing" constant="15" id="Oji-LM-iPh"/>
                             <constraint firstItem="WpS-YW-Slk" firstAttribute="leading" secondItem="XM5-ef-fdB" secondAttribute="trailing" constant="15" id="V97-d6-OP2"/>
@@ -113,7 +155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.40000000000001" y="82.3088455772114"/>
+            <point key="canvasLocation" x="128.98550724637681" y="81.696428571428569"/>
         </scene>
         <!--AboutSOKRATES-->
         <scene sceneID="O7X-Ya-hSx">
@@ -126,7 +168,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ai-6J-LHx">
                                 <rect key="frame" x="356" y="25" width="28" height="27"/>
                                 <state key="normal" image="arrow.uturn.down.circle" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" weight="light"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" scale="medium" weight="light"/>
                                 </state>
                                 <connections>
                                     <action selector="close" destination="6D3-Iv-Zsf" eventType="touchUpInside" id="tKu-UT-CgL"/>
@@ -213,11 +255,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e1H-qI-8zr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="860" y="87.706146926536732"/>
+            <point key="canvasLocation" x="1029" y="82"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrow.uturn.down.circle" catalog="system" width="64" height="60"/>
+        <image name="gear" catalog="system" width="64" height="58"/>
         <image name="info.circle" catalog="system" width="64" height="60"/>
     </resources>
 </document>
