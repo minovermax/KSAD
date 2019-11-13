@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		221942FB23775CD4003267EE /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221942FA23775CD4003267EE /* PageViewController.swift */; };
+		2223E97C2378F82E00C2CBC5 /* GraphSOKRATES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223E97B2378F82E00C2CBC5 /* GraphSOKRATES.swift */; };
 		2238D5D9235E201900C2C29D /* AboutSOKRATES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2238D5D8235E201900C2C29D /* AboutSOKRATES.swift */; };
-		22C0B9EB2374665600B58127 /* SettingsSOKRATES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C0B9EA2374665600B58127 /* SettingsSOKRATES.swift */; };
 		22E501CC235697FF00939688 /* FullQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E501CB235697FF00939688 /* FullQuote.swift */; };
 		22F908EE235616CB00AF34D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F908ED235616CB00AF34D0 /* AppDelegate.swift */; };
 		22F908F0235616CB00AF34D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F908EF235616CB00AF34D0 /* SceneDelegate.swift */; };
@@ -20,6 +21,7 @@
 		22FBBB74235A1E4600A34451 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FBBB73235A1E4600A34451 /* TodayViewController.swift */; };
 		22FBBB77235A1E4600A34451 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22FBBB75235A1E4600A34451 /* MainInterface.storyboard */; };
 		22FBBB7B235A1E4600A34451 /* SOKRATES_WIDGET.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 22FBBB6E235A1E4600A34451 /* SOKRATES_WIDGET.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2A2DB416EE263E81D710AE50 /* Pods_SOKRATES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA70DA65B1D1B98DD49A3C3 /* Pods_SOKRATES.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +49,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		221942FA23775CD4003267EE /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		2223E97B2378F82E00C2CBC5 /* GraphSOKRATES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphSOKRATES.swift; sourceTree = "<group>"; };
 		2238D5D8235E201900C2C29D /* AboutSOKRATES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSOKRATES.swift; sourceTree = "<group>"; };
-		22C0B9EA2374665600B58127 /* SettingsSOKRATES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSOKRATES.swift; sourceTree = "<group>"; };
 		22E501CB235697FF00939688 /* FullQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullQuote.swift; sourceTree = "<group>"; };
 		22F908EA235616CB00AF34D0 /* SOKRATES.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOKRATES.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F908ED235616CB00AF34D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +68,9 @@
 		22FBBB78235A1E4600A34451 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22FBBB80235A20E200A34451 /* SOKRATES.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SOKRATES.entitlements; sourceTree = "<group>"; };
 		22FBBB81235A20EE00A34451 /* SOKRATES_WIDGET.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SOKRATES_WIDGET.entitlements; sourceTree = "<group>"; };
+		69C959AB31EE6E277EA9F837 /* Pods-SOKRATES.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOKRATES.debug.xcconfig"; path = "Target Support Files/Pods-SOKRATES/Pods-SOKRATES.debug.xcconfig"; sourceTree = "<group>"; };
+		8AA70DA65B1D1B98DD49A3C3 /* Pods_SOKRATES.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOKRATES.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0E81BF746B40BADB822C6D1 /* Pods-SOKRATES.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOKRATES.release.xcconfig"; path = "Target Support Files/Pods-SOKRATES/Pods-SOKRATES.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A2DB416EE263E81D710AE50 /* Pods_SOKRATES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +100,7 @@
 				22FBBB72235A1E4600A34451 /* SOKRATES_WIDGET */,
 				22FBBB6F235A1E4600A34451 /* Frameworks */,
 				22F908EB235616CB00AF34D0 /* Products */,
+				434D2CD944C19B481540E217 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,10 +119,11 @@
 				22FBBB80235A20E200A34451 /* SOKRATES.entitlements */,
 				22F908ED235616CB00AF34D0 /* AppDelegate.swift */,
 				22F908EF235616CB00AF34D0 /* SceneDelegate.swift */,
-				22F908F1235616CB00AF34D0 /* ViewController.swift */,
 				22F908F3235616CB00AF34D0 /* Main.storyboard */,
+				221942FA23775CD4003267EE /* PageViewController.swift */,
+				22F908F1235616CB00AF34D0 /* ViewController.swift */,
+				2223E97B2378F82E00C2CBC5 /* GraphSOKRATES.swift */,
 				2238D5D8235E201900C2C29D /* AboutSOKRATES.swift */,
-				22C0B9EA2374665600B58127 /* SettingsSOKRATES.swift */,
 				22F908F6235616CC00AF34D0 /* Assets.xcassets */,
 				22F908F8235616CC00AF34D0 /* LaunchScreen.storyboard */,
 				22F908FB235616CC00AF34D0 /* Info.plist */,
@@ -127,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				22FBBB70235A1E4600A34451 /* NotificationCenter.framework */,
+				8AA70DA65B1D1B98DD49A3C3 /* Pods_SOKRATES.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -142,6 +152,15 @@
 			path = SOKRATES_WIDGET;
 			sourceTree = "<group>";
 		};
+		434D2CD944C19B481540E217 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				69C959AB31EE6E277EA9F837 /* Pods-SOKRATES.debug.xcconfig */,
+				B0E81BF746B40BADB822C6D1 /* Pods-SOKRATES.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,10 +168,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22F908FE235616CC00AF34D0 /* Build configuration list for PBXNativeTarget "SOKRATES" */;
 			buildPhases = (
+				CBD424F560AD618BAEF82E16 /* [CP] Check Pods Manifest.lock */,
 				22F908E6235616CB00AF34D0 /* Sources */,
 				22F908E7235616CB00AF34D0 /* Frameworks */,
 				22F908E8235616CB00AF34D0 /* Resources */,
 				22FBBB7C235A1E4600A34451 /* Embed App Extensions */,
+				9BECB63ECB06DFC6CEF364AA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -239,6 +260,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9BECB63ECB06DFC6CEF364AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SOKRATES/Pods-SOKRATES-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SOKRATES/Pods-SOKRATES-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SOKRATES/Pods-SOKRATES-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBD424F560AD618BAEF82E16 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SOKRATES-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		22F908E6235616CB00AF34D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -246,9 +309,10 @@
 			files = (
 				22F908F2235616CB00AF34D0 /* ViewController.swift in Sources */,
 				2238D5D9235E201900C2C29D /* AboutSOKRATES.swift in Sources */,
+				2223E97C2378F82E00C2CBC5 /* GraphSOKRATES.swift in Sources */,
+				221942FB23775CD4003267EE /* PageViewController.swift in Sources */,
 				22F908EE235616CB00AF34D0 /* AppDelegate.swift in Sources */,
 				22F908F0235616CB00AF34D0 /* SceneDelegate.swift in Sources */,
-				22C0B9EB2374665600B58127 /* SettingsSOKRATES.swift in Sources */,
 				22E501CC235697FF00939688 /* FullQuote.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +479,7 @@
 		};
 		22F908FF235616CC00AF34D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69C959AB31EE6E277EA9F837 /* Pods-SOKRATES.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -427,7 +492,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ksad.SOKRATES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -437,6 +502,7 @@
 		};
 		22F90900235616CC00AF34D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0E81BF746B40BADB822C6D1 /* Pods-SOKRATES.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -449,7 +515,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ksad.SOKRATES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -470,7 +536,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ksad.SOKRATES.SOKRATES-WIDGET";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -492,7 +558,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ksad.SOKRATES.SOKRATES-WIDGET";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

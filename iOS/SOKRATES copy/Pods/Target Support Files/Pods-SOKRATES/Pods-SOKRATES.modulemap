@@ -1,0 +1,6 @@
+framework module Pods_SOKRATES {
+  umbrella header "Pods-SOKRATES-umbrella.h"
+
+  export *
+  module * { export * }
+}

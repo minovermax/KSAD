@@ -1,59 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TSW-kS-TZf">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--SettingsSOKRATES-->
-        <scene sceneID="aRm-TP-or1">
-            <objects>
-                <viewController id="p86-y4-jbI" customClass="SettingsSOKRATES" customModule="SOKRATES" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="FJX-K7-vF9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8F-CI-4tB">
-                                <rect key="frame" x="356" y="25" width="28" height="27"/>
-                                <state key="normal" image="arrow.uturn.down.circle" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" scale="medium" weight="light"/>
-                                </state>
-                                <connections>
-                                    <action selector="close" destination="p86-y4-jbI" eventType="touchUpInside" id="QV3-Tn-LQX"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="yJo-H4-AZc" firstAttribute="trailing" secondItem="R8F-CI-4tB" secondAttribute="trailing" constant="30" id="9gm-cV-Y6V"/>
-                            <constraint firstItem="R8F-CI-4tB" firstAttribute="top" secondItem="yJo-H4-AZc" secondAttribute="top" constant="25" id="a4N-Fu-TCd"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="yJo-H4-AZc"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="YoW-fd-Nx1"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vd3-GV-P33" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="128.98550724637681" y="804.91071428571422"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SOKRATES" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sbInitial" id="BYZ-38-t0r" customClass="ViewController" customModule="SOKRATES" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RnU-ed-ENK">
-                                <rect key="frame" x="40" y="388" width="334" height="27.5"/>
+                                <rect key="frame" x="40" y="346" width="295" height="27.666666666666686"/>
                                 <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="21"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XM5-ef-fdB">
-                                <rect key="frame" x="180" y="488" width="54" height="72"/>
+                                <rect key="frame" x="160.66666666666666" y="446" width="54" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="🌟"/>
                                 <connections>
@@ -61,7 +31,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lh-kp-FKe">
-                                <rect key="frame" x="111" y="488" width="54" height="72"/>
+                                <rect key="frame" x="91.666666666666671" y="446" width="54.000000000000014" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="🔥"/>
                                 <connections>
@@ -69,15 +39,43 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WpS-YW-Slk">
-                                <rect key="frame" x="249" y="488" width="54" height="72"/>
+                                <rect key="frame" x="229.66666666666663" y="446" width="54" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="💪🏻"/>
                                 <connections>
                                     <action selector="setEmpoweringQuoteButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="83W-56-FDM"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SOKRATES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIE-cW-LCA">
+                                <rect key="frame" x="25" y="273" width="325" height="65"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="50"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67O-8Y-sor">
+                                <rect key="frame" x="178.66666666666666" y="396" width="18" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eX0-Um-abH">
+                                <rect key="frame" x="25" y="714" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="Gbk-DV-Dfq"/>
+                                    <constraint firstAttribute="width" constant="44" id="LVW-lf-N3E"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="OGp-EL-8vs"/>
+                                    <constraint firstAttribute="height" constant="44" id="g4I-NH-npd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" image="Image">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" scale="medium" weight="light"/>
+                                </state>
+                                <connections>
+                                    <action selector="twitterShare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kMj-Ez-Wek"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btA-sc-6Ok">
-                                <rect key="frame" x="356" y="810" width="28" height="27"/>
+                                <rect key="frame" x="319" y="723" width="28" height="27"/>
                                 <state key="normal" image="info.circle" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" scale="medium" weight="light"/>
                                 </state>
@@ -85,38 +83,16 @@
                                     <segue destination="6D3-Iv-Zsf" kind="presentation" modalTransitionStyle="coverVertical" id="i0a-Fw-ndu"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SOKRATES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIE-cW-LCA">
-                                <rect key="frame" x="25" y="315" width="364" height="65"/>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="50"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67O-8Y-sor">
-                                <rect key="frame" x="198" y="438" width="18" height="20"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eX0-Um-abH">
-                                <rect key="frame" x="30" y="813" width="30.5" height="29"/>
-                                <state key="normal" image="gear" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" scale="medium" weight="light"/>
-                                </state>
-                                <connections>
-                                    <segue destination="p86-y4-jbI" kind="presentation" modalTransitionStyle="coverVertical" id="JNd-W5-h4r"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="WpS-YW-Slk" firstAttribute="top" secondItem="67O-8Y-sor" secondAttribute="bottom" constant="30" id="238-Bn-3Fb"/>
                             <constraint firstItem="QIE-cW-LCA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="2Hn-CP-PEc"/>
-                            <constraint firstItem="eX0-Um-abH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="4me-nf-OUF"/>
                             <constraint firstItem="67O-8Y-sor" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4rl-6P-Fiv"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="btA-sc-6Ok" secondAttribute="trailing" constant="30" id="7SE-Ay-Nt8"/>
                             <constraint firstItem="XM5-ef-fdB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8QP-vg-l1k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="btA-sc-6Ok" secondAttribute="trailing" constant="28" id="9Th-iT-OgF"/>
                             <constraint firstItem="67O-8Y-sor" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ARv-8E-BQG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="btA-sc-6Ok" secondAttribute="bottom" constant="25" id="BZ2-EK-loV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eX0-Um-abH" secondAttribute="bottom" constant="20" id="ChF-xj-sc2"/>
                             <constraint firstItem="4lh-kp-FKe" firstAttribute="top" secondItem="67O-8Y-sor" secondAttribute="bottom" constant="30" id="OgS-Vn-ORl"/>
                             <constraint firstItem="XM5-ef-fdB" firstAttribute="leading" secondItem="4lh-kp-FKe" secondAttribute="trailing" constant="15" id="Oji-LM-iPh"/>
@@ -133,6 +109,8 @@
                             <constraint firstItem="67O-8Y-sor" firstAttribute="top" secondItem="QIE-cW-LCA" secondAttribute="bottom" constant="58" id="iXE-0b-43P"/>
                             <constraint firstItem="67O-8Y-sor" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nmz-p0-5Lp"/>
                             <constraint firstItem="RnU-ed-ENK" firstAttribute="top" secondItem="QIE-cW-LCA" secondAttribute="bottom" constant="8" id="ny8-k1-Aug"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="btA-sc-6Ok" secondAttribute="bottom" constant="28" id="wy8-cZ-Yaf"/>
+                            <constraint firstItem="eX0-Um-abH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="y4t-qz-u4L"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <variation key="default">
@@ -157,16 +135,81 @@
             </objects>
             <point key="canvasLocation" x="128.98550724637681" y="81.696428571428569"/>
         </scene>
+        <!--GraphSOKRATES-->
+        <scene sceneID="wBs-cC-ECk">
+            <objects>
+                <viewController storyboardIdentifier="sbGraph" id="ECL-qH-rJs" customClass="GraphSOKRATES" customModule="SOKRATES" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pz8-a6-sgI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSi-L5-fbB" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="204" width="335" height="454"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Total Requests:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrX-UU-ZC5">
+                                <rect key="frame" x="24.333333333333343" y="157" width="326.33333333333326" height="39"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzs-sE-dNZ">
+                                <rect key="frame" x="326" y="721" width="26" height="29"/>
+                                <state key="normal" image="trash" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" scale="medium" weight="light"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButton:" destination="ECL-qH-rJs" eventType="touchUpInside" id="7qc-Ua-DE3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fHE-vc-j7H" firstAttribute="bottom" secondItem="nSi-L5-fbB" secondAttribute="bottom" constant="120" id="DGW-KR-cUh">
+                                <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                            </constraint>
+                            <constraint firstItem="nSi-L5-fbB" firstAttribute="leading" secondItem="fHE-vc-j7H" secondAttribute="leading" constant="20" id="QFv-t4-tqf">
+                                <variation key="heightClass=regular-widthClass=regular" constant="125"/>
+                            </constraint>
+                            <constraint firstItem="nSi-L5-fbB" firstAttribute="top" secondItem="yrX-UU-ZC5" secondAttribute="bottom" constant="8" id="SrV-Sx-Z35"/>
+                            <constraint firstItem="nSi-L5-fbB" firstAttribute="top" secondItem="fHE-vc-j7H" secondAttribute="top" constant="160" id="cGL-RA-OqJ">
+                                <variation key="heightClass=regular-widthClass=regular" constant="175"/>
+                            </constraint>
+                            <constraint firstItem="yrX-UU-ZC5" firstAttribute="centerX" secondItem="Pz8-a6-sgI" secondAttribute="centerX" id="cdR-np-i9l"/>
+                            <constraint firstItem="fHE-vc-j7H" firstAttribute="trailing" secondItem="vzs-sE-dNZ" secondAttribute="trailing" constant="23" id="eqN-kV-buX"/>
+                            <constraint firstItem="fHE-vc-j7H" firstAttribute="bottom" secondItem="vzs-sE-dNZ" secondAttribute="bottom" constant="28" id="fMh-ig-aCD"/>
+                            <constraint firstItem="fHE-vc-j7H" firstAttribute="trailing" secondItem="nSi-L5-fbB" secondAttribute="trailing" constant="20" id="rcb-Wt-qbT">
+                                <variation key="heightClass=regular-widthClass=regular" constant="125"/>
+                            </constraint>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fHE-vc-j7H"/>
+                    </view>
+                    <connections>
+                        <outlet property="pieChart" destination="nSi-L5-fbB" id="odr-NU-bSv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4N0-FI-KEW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="959.17968749999989" y="83.455344070278173"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="3nV-i7-0y5">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="TSW-kS-TZf" customClass="PageViewController" customModule="SOKRATES" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aGG-li-RRa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="-598"/>
+        </scene>
         <!--AboutSOKRATES-->
         <scene sceneID="O7X-Ya-hSx">
             <objects>
                 <viewController id="6D3-Iv-Zsf" customClass="AboutSOKRATES" customModule="SOKRATES" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wzs-WC-tbK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ai-6J-LHx">
-                                <rect key="frame" x="356" y="25" width="28" height="27"/>
+                                <rect key="frame" x="317" y="25" width="28" height="27"/>
                                 <state key="normal" image="arrow.uturn.down.circle" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" scale="medium" weight="light"/>
                                 </state>
@@ -175,55 +218,55 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMPOWERMENT " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcP-DA-Vlj">
-                                <rect key="frame" x="48" y="587" width="318" height="42"/>
+                                <rect key="frame" x="48" y="545" width="279" height="42"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="32"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick what you need." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpj-jt-Xtb">
-                                <rect key="frame" x="40" y="70" width="334" height="42"/>
+                                <rect key="frame" x="40" y="70" width="295" height="42"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="32"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MOTIVATION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YuK-em-4Cd">
-                                <rect key="frame" x="74" y="319" width="266" height="42"/>
+                                <rect key="frame" x="74" y="277" width="227" height="42"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="32"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🌟" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLT-vW-Vrr">
-                                <rect key="frame" x="180" y="391" width="54" height="60"/>
+                                <rect key="frame" x="160.66666666666666" y="349" width="54" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INSPIRATION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0u-ed-mgg">
-                                <rect key="frame" x="70" y="453" width="274" height="42"/>
+                                <rect key="frame" x="70" y="411" width="235" height="42"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="32"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🔥" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5J-aL-zvn">
-                                <rect key="frame" x="160" y="257" width="94" height="60"/>
+                                <rect key="frame" x="160" y="215" width="55" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💪🏻" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7IP-8S-Xi4">
-                                <rect key="frame" x="160" y="525" width="94" height="60"/>
+                                <rect key="frame" x="160" y="483" width="55" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© KSAD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6F5-D1-vbl">
-                                <rect key="frame" x="175" y="782.5" width="64" height="22.5"/>
+                                <rect key="frame" x="155.66666666666666" y="698.66666666666663" width="64" height="22.333333333333371"/>
                                 <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="17"/>
                                 <color key="textColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
                             <constraint firstItem="YuK-em-4Cd" firstAttribute="leading" secondItem="TTa-2E-AMf" secondAttribute="leading" constant="74" id="2C3-Pk-pMJ"/>
                             <constraint firstItem="TTa-2E-AMf" firstAttribute="trailing" secondItem="7IP-8S-Xi4" secondAttribute="trailing" constant="160" id="3oJ-ex-o75"/>
@@ -255,12 +298,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e1H-qI-8zr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1029" y="82"/>
+            <point key="canvasLocation" x="129" y="813"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Image" width="500" height="500"/>
         <image name="arrow.uturn.down.circle" catalog="system" width="64" height="60"/>
-        <image name="gear" catalog="system" width="64" height="58"/>
         <image name="info.circle" catalog="system" width="64" height="60"/>
+        <image name="trash" catalog="system" width="60" height="64"/>
+        <namedColor name="backgroundColor">
+            <color red="0.94900000095367432" green="0.94900000095367432" blue="0.97100001573562622" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

@@ -9,6 +9,7 @@
 import UIKit
 import Network
 import UserNotifications
+import Charts
 
 class ViewController: UIViewController {
     
@@ -18,11 +19,21 @@ class ViewController: UIViewController {
     var lastRandNumInspiring = -1
     var lastRandNumEmpowering = -1
     var lastRandNumMotivating = -1
-
+    
+    // graph connector
+    var quoteChanged = false
+    
+    // graph counter
+    var inspiringCounter = UserDefaults(suiteName: "group.com.ksad.sokrates")?.value(forKey: "inspiringCounter") as? Double ?? 0
+    var empoweringCounter = UserDefaults(suiteName: "group.com.ksad.sokrates")?.value(forKey: "empoweringCounter") as? Double ?? 0
+    var motivatingCounter = UserDefaults(suiteName: "group.com.ksad.sokrates")?.value(forKey: "motivatingCounter") as? Double ?? 0
+    
+    
     
     // DO NOT TOUCH - function for loading view
     override func viewDidLoad() {
         super.viewDidLoad()
+        saveChartData()
         
         notifications()
         
@@ -53,8 +64,15 @@ class ViewController: UIViewController {
         let queue = DispatchQueue(label: "InternetConnectionMonitor")
         monitor.start(queue: queue)
         
-        
     } // NEVER TOUCH
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        inspiringCounter = UserDefaults(suiteName: "group.com.ksad.sokrates")?.value(forKey: "inspiringCounter") as? Double ?? 0
+        empoweringCounter = UserDefaults(suiteName: "group.com.ksad.sokrates")?.value(forKey: "empoweringCounter") as? Double ?? 0
+        motivatingCounter = UserDefaults(suiteName: "group.com.ksad.sokrates")?.value(forKey: "motivatingCounter") as? Double ?? 0
+        
+    }
     
     
     // MARK: - Label & Button Setup
@@ -62,12 +80,18 @@ class ViewController: UIViewController {
     // connecting labels
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
+
     
     // connecting buttons
     @IBAction func setInspiringQuoteButton(_ sender: Any) {
         if internetConnected == true {
             setInspiringQuote()
             notifications()
+            
+            inspiringCounter += 1
+
+            saveChartData()
+
         } else if internetConnected == false {
             showNoInternetAlert()
         }
@@ -77,6 +101,12 @@ class ViewController: UIViewController {
         if internetConnected == true {
             setEmpoweringQuote()
             notifications()
+            
+            
+            empoweringCounter += 1
+
+            saveChartData()
+
         } else if internetConnected == false {
             showNoInternetAlert()
         }
@@ -86,9 +116,31 @@ class ViewController: UIViewController {
         if internetConnected == true {
             setMotivatingQuote()
             notifications()
+            
+            motivatingCounter += 1
+
+            saveChartData()
+ 
         } else if internetConnected == false {
             showNoInternetAlert()
         }
+    }
+    
+    @IBAction func twitterShare(_ sender: Any) {
+        
+        let tweetText = quoteLabel.text!
+        let tweetUrl = authorLabel.text
+
+        let shareString = "https://twitter.com/intent/tweet?text=" + tweetText + "&url=" + tweetUrl!
+
+        // encode a space to %20 for example
+        let escapedShareString = shareString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+
+        // cast to an url
+        let url = URL(string: escapedShareString)
+
+        // open in safari
+        UIApplication.shared.open(url!, options: [:], completionHandler: nil)
     }
     
     // MARK: - Internet Connection
@@ -135,7 +187,6 @@ class ViewController: UIViewController {
                 
                 self.lastRandNumInspiring = randomQuote
                 
-                print(randomQuote)
 
                 // IB referencing here (Use Main Thread Checker)
                 DispatchQueue.main.async {
@@ -194,8 +245,6 @@ class ViewController: UIViewController {
                 }
                 
                 self.lastRandNumEmpowering = randomQuote
-                
-                print(randomQuote)
 
                 
                 // IB referencing here (Use Main Thread Checker)
@@ -255,8 +304,6 @@ class ViewController: UIViewController {
                 }
                 
                 self.lastRandNumMotivating = randomQuote
-                
-                print(randomQuote)
 
                 
                 // IB referencing here (Use Main Thread Checker)
@@ -297,7 +344,8 @@ class ViewController: UIViewController {
         let content = UNMutableNotificationContent()
         content.title = "Yesterday's Great Knowledge:"
         
-        content.body = ((UserDefaults(suiteName: "group.com.ksad.sokrates")?.value(forKey: "quote") as! String))
+        content.body = ((UserDefaults(suiteName: "group.com.ksad.sokrates")?.value(forKey: "quote") as? String ?? "Set a quote from SOKRATES!"))
+        
         
         
         content.sound = UNNotificationSound.default
@@ -317,8 +365,15 @@ class ViewController: UIViewController {
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
     
+    // MARK: - Charts
     
-    
+    func saveChartData() {
+        
+        UserDefaults.init(suiteName: "group.com.ksad.sokrates")?.setValue(inspiringCounter, forKey: "inspiringCounter")
+        UserDefaults.init(suiteName: "group.com.ksad.sokrates")?.setValue(empoweringCounter, forKey: "empoweringCounter")
+        UserDefaults.init(suiteName: "group.com.ksad.sokrates")?.setValue(motivatingCounter, forKey: "motivatingCounter")
+        
+    }
 }
 
 
